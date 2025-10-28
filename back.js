@@ -6,6 +6,7 @@ const mainProjects = [
       { image: "workExamples/IMG_0990.jpeg", title: "1" },
       { image: "workExamples/IMG_0987.jpeg", title: "2" },
       { image: "workExamples/IMG_0986.jpeg", title: "3" },
+      { image: "workExamples/IMG_0992.jpeg", title: "4" },
     ],
   }
 ]
@@ -168,3 +169,4 @@ function loadOtherProjects() {
     projectContainer.appendChild(article);
   });
 }
+
