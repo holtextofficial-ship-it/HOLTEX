@@ -8,6 +8,14 @@ const mainProjects = [
       { image: "workExamples/IMG_0986.jpeg", title: "3" },
       { image: "workExamples/IMG_0992.jpeg", title: "4" },
     ],
+  },
+  {
+    title: "Ograde",
+    description: "",
+    images: [
+      { image: "workExamples/BRIDGE.png", title: "1" },
+      { image: "workExamples/BRIDGE1.png", title: "2" },
+    ],
   }
 ]
 
@@ -56,6 +64,11 @@ const otherProjects = [
       title: " 9",
       description: "",
       image: "workExamples/IMG_3181.jpeg",
+    },
+  {
+      title: " 10",
+      description: "",
+      image: "workExamples/TABLE.png",
     },
   ];
 document.addEventListener("DOMContentLoaded", () => {
@@ -169,5 +182,6 @@ function loadOtherProjects() {
     projectContainer.appendChild(article);
   });
 }
+
 
 
