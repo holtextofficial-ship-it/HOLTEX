@@ -120,6 +120,8 @@ function loadMainProjects() {
     sectionTitle.className = "section-title";
     sectionTitle.textContent = project.title;
 
+    projectGrid.appendChild(sectionTitle);
+    
     project.images.forEach((img) => {
       const article = document.createElement("article");
       article.className = "work-card";
@@ -135,8 +137,6 @@ function loadMainProjects() {
           <p class="card-sub">${project.description}</p>
         </div>
       `;
-
-      projectGrid.appendChild(sectionTitle);
       projectContainer.appendChild(article);
       projectGrid.appendChild(projectContainer);
       
@@ -182,6 +182,7 @@ function loadOtherProjects() {
     projectContainer.appendChild(article);
   });
 }
+
 
 
 
