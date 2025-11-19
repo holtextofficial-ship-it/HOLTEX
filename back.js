@@ -105,21 +105,23 @@ function setupScrollButtons() {
 --------------------------------*/
 
 function loadMainProjects() {
-  // Target container in HTML
-  const projectGrid = document.getElementById("projects")
+  const projectGrid = document.getElementById("projects");
+  projectGrid.innerHTML = ""; // clear previous
 
-  const projectContainer = document.createElement("div");
-  projectContainer.role = "list";
-  projectContainer.className = "main-grid";
-
-  projectContainer.innerHTML = "";
-
-  // Dynamically create project cards
   mainProjects.forEach((project) => {
+    
+    // 1️⃣ Create and add the section title BEFORE images
     const sectionTitle = document.createElement("h2");
     sectionTitle.className = "section-title";
     sectionTitle.textContent = project.title;
-    
+    projectGrid.appendChild(sectionTitle);
+
+    // 2️⃣ Create one container per project
+    const projectContainer = document.createElement("div");
+    projectContainer.role = "list";
+    projectContainer.className = "main-grid";
+
+    // 3️⃣ Loop through images and add cards to *only* the container
     project.images.forEach((img) => {
       const article = document.createElement("article");
       article.className = "work-card";
@@ -136,12 +138,14 @@ function loadMainProjects() {
         </div>
       `;
 
-      projectGrid.appendChild(sectionTitle);
       projectContainer.appendChild(article);
-      projectGrid.appendChild(projectContainer);
     });
+
+    // 4️⃣ Only append this ONCE per section
+    projectGrid.appendChild(projectContainer);
   });
 }
+
 
 function loadOtherProjects() {
   // Target container in HTML
@@ -181,6 +185,7 @@ function loadOtherProjects() {
     projectContainer.appendChild(article);
   });
 }
+
 
 
 
